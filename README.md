@@ -1,5 +1,5 @@
 # positional_embedding  
-
+```
 def positional_encoding(seq_len, d_model):
     PE = torch.zeros(seq_len, d_model)
     position = torch.arange(0, seq_len, dtype=torch.float).unsqueeze(1)
@@ -21,3 +21,4 @@ plt.ylim((seq_len, 0))
 plt.ylabel('Sequence Length')
 plt.colorbar()
 plt.show()
+```
