@@ -10,11 +10,17 @@ def positional_encoding(seq_len, d_model):
     return PE
     
     
-seq_len = 240
-d_model = 9
+seq_len = 2000
+d_model = 5
 pos_encoding = positional_encoding(seq_len = seq_len, d_model = d_model)
-plt.figure(figsize=(4,3))
-plt.pcolormesh(pos_encoding, cmap='viridis')
+plt.figure(figsize=(20,10))
+
+from matplotlib import cm
+
+inferno = cm.get_cmap('inferno')
+
+
+plt.pcolormesh(pos_encoding, cmap=inferno)
 plt.xlabel('Embedding Dimensions')
 plt.xlim((0, d_model))
 plt.ylim((seq_len, 0))
